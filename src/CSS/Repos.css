@@ -1,0 +1,14 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.repos-container{
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+    margin: 1rem;
+}
+.repos-container span{
+    padding: 0.25rem;
+    
+}

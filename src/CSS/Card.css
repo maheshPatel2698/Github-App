@@ -1,0 +1,33 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.main-card{
+    border: 2px solid black;
+    width: 100%;
+    height: auto;
+    padding: 0.50rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.img-class{
+    width: 15rem;
+    height: 15rem;
+}
+.user{
+    width: 100%;
+    height: 100%;
+}
+.right-class{
+   
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+.right-class span{
+    margin: 1rem;
+    padding: 1rem;
+}

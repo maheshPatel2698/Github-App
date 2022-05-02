@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+// Importing Components
+import NavBar from "./Components/NavBar";
+import Home from "./Components/Home"
+import Signin from "./Components/Signin"
+import Signup from "./Components/Signup"
+import PageNotFound from "./Components/PageNotFound";
+import UserContext from "./Context/UserContext"
+
+// Importing Router
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+
+// Importing bootstrap
+import "bootstrap/dist/css/bootstrap.min.css"
+
+// Importing firebase
+import firebase from "firebase/compat/app"
+import "firebase/compat/auth"
+
+import firebaseconfig from "./Config/firebaseconfig"
+firebase.initializeApp(firebaseconfig)
+
 
 function App() {
+  const [user, setUser] = useState(null)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <UserContext.Provider value={{ user, setUser }}>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </UserContext.Provider>
+    </Router>
   );
 }
 

@@ -1,0 +1,42 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.si-main-container {
+  border: 2px solid black;
+
+  width: 35rem;
+  height: 15rem;
+  margin: auto;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.si-sub-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+}
+#e {
+  width: 80%;
+  padding: 0.25rem;
+}
+#p {
+  width: 80%;
+  padding: 0.25rem;
+}
+#btn {
+  width: 80%;
+}
+@media(max-width:500px){
+  .si-main-container{
+      width: 100%;
+      margin: 0.5rem;
+  }
+}
