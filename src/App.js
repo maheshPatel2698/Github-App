@@ -31,7 +31,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="*" element={<Home />} />
+          <Route path="/Github-App" element={<Home />} />
         </Routes>
       </UserContext.Provider>
     </Router>
