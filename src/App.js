@@ -4,7 +4,7 @@ import NavBar from "./Components/NavBar";
 import Home from "./Components/Home"
 import Signin from "./Components/Signin"
 import Signup from "./Components/Signup"
-
+import PageNotFound from "./Components/PageNotFound";
 import UserContext from "./Context/UserContext"
 
 // Importing Router
@@ -28,10 +28,11 @@ function App() {
       <UserContext.Provider value={{ user, setUser }}>
         <NavBar />
         <Routes>
+
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/Github-App" element={<Home />} />
+          <Route path="*" element={<Home/>} />
         </Routes>
       </UserContext.Provider>
     </Router>
